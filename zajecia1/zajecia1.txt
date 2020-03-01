@@ -1,0 +1,63 @@
+Zadanie 1. Otworz program RStudio. Nast?pnie utworz nowy skrypt i zapisz go jako, na przyk?ad, wprowadzenie_do_R_zadania.R. W tym skrypcie mo?esz napisa? rozwi?zania nast?puj?cych zada?.
+
+Zadanie 2. U?yj funkcji rep(), aby utworzy? wektor logiczny, zaczynaj?c od trzech warto?ci prawda, nast?pnie czterech warto?ci fa?sz, po ktorych nast?puj? dwie warto?ci prawda i wreszcie pi?? warto?ci fa?sz. Przypisz ten wektor logiczny do zmiennej x. Na koniec przekonwertuj ten wektor na wektor numeryczny. Jak zmieni?y si? warto?ci prawda i fa?sz?
+
+##  [1]  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE
+## [13] FALSE FALSE
+##  [1] 1 1 1 0 0 0 0 1 1 0 0 0 0 0
+Zadanie 3. Palindromem nazywamy wektor, ktorego elementy czytane od ko?ca tworz? ten sam wektor co elementy czytane od pocz?tku. Utworz taki wektor 100 liczb przy czym pierwsze 20 liczb to kolejne liczby naturalne, nast?pnie wyst?puje 10 zer, nast?pnie 20 kolejnych liczb parzystych, a pozosta?e elementy okre?lone s? przez palindromiczno?? (warunek symetrii).
+
+##   [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20  0  0  0  0  0
+##  [26]  0  0  0  0  0  2  4  6  8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40
+##  [51] 40 38 36 34 32 30 28 26 24 22 20 18 16 14 12 10  8  6  4  2  0  0  0  0  0
+##  [76]  0  0  0  0  0 20 19 18 17 16 15 14 13 12 11 10  9  8  7  6  5  4  3  2  1
+Zadanie 4. Z wektora letters wybierz litery na pozycjach 5, 10, 15, 20, 25.
+
+## [1] "e" "j" "o" "t" "y"
+Zadanie 5. Utworz wektor liczb naturalnych od 1 do 1000, a nast?pnie zamie? liczby parzyste na ich odwrotno?ci.
+
+## [1] 1 0.5 3 0.25 5 0.1666667 ...
+Zadanie 6. Uporz?dkuj elementy wektora  
+(6, 3, 4, 5, 2, 3)
+  od najwi?kszego do najmniejszego wykorzystuj?c funkcj? order().
+
+## [1] 6 5 4 3 3 2
+Zadanie 7. Wyznacz znaki elementow wektora  
+(?1,876;?1,123;?0,123;0;0,123;1,123;1,876)
+ . Nast?pnie zaokr?glij elementy tego wektora do dwoch miejsc po przecinku. Na koniec wyznacz cz??? ca?kowit? ka?dego elementu nowego wektora.
+
+## [1] -1 -1 -1  0  1  1  1
+## [1] -1.88 -1.12 -0.12  0.00  0.12  1.12  1.88
+## [1] -2 -2 -1  0  0  1  1
+Zadanie 8. Wyznacz pierwiastek kwadratowy z ka?dej liczby naturalnej od 1 do 100 milionow. Najpierw wykonaj to polecenie korzystaj?c z odpowiedniej funkcji wbudowanej w R, a nast?pnie wykorzystuj?c pot?gowanie. Ktory sposob dzia?a szybciej? Wskazowka: Do badania d?ugo?ci czasu dzia?ania programu mo?na wykorzysta? funkcj? Sys.time().
+
+## Time difference of 1.485525 secs
+## Time difference of 9.706759 secs
+## [1] 1 1.414214 1.732051 2 2.236068 2.44949 ...
+Zadanie 9. W pakiecie schoolmath znajduje si? zbior danych primlist, ktory zawiera liczby pierwsze pomi?dzy 1 a 9999999.
+
+Znajd? najwi?ksz? liczb? pierwsz? mniejsz? od 1000.
+Ile jest liczb pierwszych wi?kszych od 100 a mniejszych od 500?
+## [1] 997
+## [1] 73
+Zadanie 10. Wyznacz wszystkie kombinacje warto?ci wektorow  
+(a, b)  i  (1, 2, 3)za pomoc? funkcji rep() i paste().
+
+## [1] "a1" "a2" "a3" "b1" "b2" "b3"
+Zadanie 11. Utworz wektor 30 napisow nast?puj?cej postaci: liczba.litera, gdzie liczba to kolejne liczby naturalne od 1 do 30 a litera to trzy wielkie litery X, Y, Z wyst?puj?ce cyklicznie.
+
+##  [1] "1.X"  "2.Y"  "3.Z"  "4.X"  "5.Y"  "6.Z"  "7.X"  "8.Y"  "9.Z"  "10.X"
+## [11] "11.Y" "12.Z" "13.X" "14.Y" "15.Z" "16.X" "17.Y" "18.Z" "19.X" "20.Y"
+## [21] "21.Z" "22.X" "23.Y" "24.Z" "25.X" "26.Y" "27.Z" "28.X" "29.Y" "30.Z"
+Zadanie 12. W pewnych sytuacjach przydatna mo?e si? okaza? tzw. kategoryzacja zmiennych, czyli inny podzia? na kategorie ni?by wynika? z danych. Wygeneruj 100 obserwacji, ktore s? odpowiedziami na pytania ankiety, ka?da odpowied? mo?e przyj?? jedn? z warto?ci: ÅeaÅf, ÅebÅf, ÅecÅf, ÅedÅf, ÅeeÅf. Dokonaj kategoryzacji w taki sposob, aby kategoria 1 obejmowa?a odpowiedzi ÅeaÅf i ÅebÅf, 2 odpowiedzi ÅecÅf i ÅedÅf oraz 3 odpowied? ÅeeÅf. Wskazowka: Wykorzystaj funkcj? sample() oraz funkcj? recode() z pakietu car.
+
+## Loading required package: carData
+##   [1] "d" "b" "e" "d" "a" "e" "d" "b" "b" "d" "d" "d" "e" "d" "c" "d" "e" "b"
+##  [19] "e" "b" "c" "d" "d" "c" "a" "c" "d" "b" "c" "b" "e" "a" "c" "a" "e" "a"
+##  [37] "a" "b" "a" "c" "b" "c" "a" "c" "a" "b" "e" "a" "c" "c" "b" "e" "b" "d"
+##  [55] "d" "a" "e" "c" "e" "c" "d" "d" "a" "d" "d" "c" "a" "d" "a" "b" "e" "e"
+##  [73] "e" "a" "b" "b" "b" "e" "c" "d" "d" "c" "b" "d" "e" "b" "a" "c" "c" "a"
+##  [91] "e" "a" "e" "a" "b" "c" "c" "e" "d" "c"
+##   [1] 2 1 3 2 1 3 2 1 1 2 2 2 3 2 2 2 3 1 3 1 2 2 2 2 1 2 2 1 2 1 3 1 2 1 3 1 1
+##  [38] 1 1 2 1 2 1 2 1 1 3 1 2 2 1 3 1 2 2 1 3 2 3 2 2 2 1 2 2 2 1 2 1 1 3 3 3 1
+##  [75] 1 1 1 3 2 2 2 2 1 2 3 1 1 2 2 1 3 1 3 1 1 2 2 3 2 2
