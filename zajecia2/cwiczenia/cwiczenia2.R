@@ -55,4 +55,13 @@ dane1[seq(2,nrow(dane1),by = 2),]
 dane1[dane1$Wezly.chlonne == 1 & dane1$Wiek>50,]
 
 # zadanie 6 ####
+ramka <- data.frame(
+  c("Styczen", "Luty", "Marzec", "Kwiecien", "Maj", "Czerwiec", "Lipiec", "Sierpien", "Wrzesien", "Pazdziernik", "Listopad", "Grudzien"),
+  NY_F = c(32,33,41,52,62,72,77,75,68,58,47,35)
+)
 
+ramka$NY_c <- (ramka$NY_F-32) * 5/9
+colnames(ramka) <- c("", "NY_Fahrenheit", "NY_Celsiusz")
+ramka
+ramka$NY_Fahrenheit <- NULL 
+save(ramka, file="NY_temp.RData")
