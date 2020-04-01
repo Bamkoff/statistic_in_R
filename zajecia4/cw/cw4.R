@@ -27,6 +27,8 @@ barplot(table(ankieta$wynik),
         xlab = "Odpowiedzi", ylab = "Liczebnosc",
         main = "Rozklad empiryczny zmiennej wynik")
 
+
+
 barplot(prop.table(table(ankieta$wynik)),
         xlab = "Odpowiedzi", ylab = "Prawdopodobienstwo",
         main = "Rozklad empiryczny zmiennej wynik")
@@ -53,6 +55,14 @@ barplot(as.matrix(ramka),
         main = "Rozklad empiryczny zmiennej wynik",
         col = colours,
         beside = TRUE)
+
+# prostsza opcja
+barplot(table(ankieta$wynik, ankieta$plec),
+        xlab = "Odpowiedzi", ylab = "Liczebnosc",
+        main = "Rozklad empiryczny zmiennej wynik",
+        col = colours,
+        beside = TRUE)
+
 
 # zad 2 ####
 # 1)
